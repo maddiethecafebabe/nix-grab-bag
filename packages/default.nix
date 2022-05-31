@@ -1,3 +1,3 @@
-self: super: {
-    MagicaVoxel = super.callPackage ./MagicaVoxel.nix {};
+final: prev: {
+    MagicaVoxel = final.callPackage ./MagicaVoxel.nix {};
 }
