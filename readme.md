@@ -61,7 +61,7 @@ or
 { pgks, ... }:
 
 {
-    environment.systemPackages = [ grab-bag.MagicaVoxel ];
+    environment.systemPackages = with pkgs; [ grab-bag.MagicaVoxel ];
 
     services.activate-linux.enable = true;
 }
