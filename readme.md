@@ -53,3 +53,13 @@ You can then install packages in either `home.packages` or globally
     ];
 }
 ```
+or
+```nix
+{ pgks, ... }:
+
+{
+    environment.systemPackages = [ grab-bag.MagicaVoxel ];
+
+    services.activate-linux.enable = true;
+}
+```
