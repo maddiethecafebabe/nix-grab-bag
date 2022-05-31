@@ -10,8 +10,6 @@
 , executable ? null
 }:
 
-assert executable != null "executable needs to be set to point to a sai2.exe";
-
 let 
     pname = "sai2";
     version = "0.01";
