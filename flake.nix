@@ -19,6 +19,8 @@
       overlays = [ self.overlays.default ];
     };
   in {
-    overlays.default = import ./packages;
+    overlays.default = (import ./packages);
+
+    nixosModules.default = import ./modules;
   };
 }
