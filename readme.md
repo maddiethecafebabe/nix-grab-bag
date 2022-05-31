@@ -2,7 +2,7 @@
 just a personal collection of packages/modules that are unlikely to be
 merged ever. 
 
-## usage in a flake
+<details><summary>Installation for flakes</summary>
 ```nix
 {
   description = "A very basic flake";
@@ -41,6 +41,7 @@ merged ever.
   };
 }
 ```
+</details>
 
 You can then install packages in either `home.packages` or globally
 ```nix
