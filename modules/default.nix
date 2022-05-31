@@ -1,4 +1,6 @@
 { lib, pkgs, config, ... }:
 {
-    imports = [ ];
+    imports = [
+        ./activate-linux.nix
+    ];
 }
