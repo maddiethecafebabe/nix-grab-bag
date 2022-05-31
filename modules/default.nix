@@ -1,7 +1,4 @@
-{ lib, pkgs, ... }:
-
+{ lib, pkgs, config, ... }:
 {
-    imports = [
-        ./sai2
-    ];
+    imports = [ ];
 }
