@@ -3,16 +3,16 @@
 , fetchzip
 , fetchurl
 , makeDesktopItem
-, wine ? null
+, winePackage ? null
 , wineWowPackages
 }:
 
 let 
     pname = "MagicaVoxel";
     version = "0.99.7";
-    winever = if wine == null 
+    winever = if winePackage == null 
                 then wineWowPackages.stable
-                else wine;
+                else winePackage;
     src = fetchzip {
         url = "https://github.com/ephtracy/ephtracy.github.io/releases/download/${version}/MagicaVoxel-${version}.0-win64.zip";
         sha256 = "sha256-zsU/N004RswYHt0ZFKzboTu4362APRbKLHs97rNPCPM=";
