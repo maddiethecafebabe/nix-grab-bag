@@ -5,8 +5,8 @@ merged ever.
 | Program         | module/pkg name | Notes  |
 | :-------------- |:-------------| :-----|
 | activate-linux  | [`services.activate-linux`](./modules/activate-linux.nix) | / |
-| sai2            | [`nix-grab-bag.sai2`](./packages/sai2/default.nix) | wine+desktop wrapper, needs path to existing install |
-| MagicaVoxel     | [`nix-grab-bag.MagicaVoxel`](./packages/MagicaVoxel.nix) | wine+desktop wrapper |
+| sai2            | [`grab-bag.sai2`](./packages/sai2/default.nix) | wine+desktop wrapper, needs path to existing install |
+| MagicaVoxel     | [`grab-bag.MagicaVoxel`](./packages/MagicaVoxel.nix) | wine+desktop wrapper |
 
 <details><summary>Installation for flakes</summary>
 
