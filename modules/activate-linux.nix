@@ -1,4 +1,4 @@
-{ pkgs, lib, config, ... }: 
+{ pkgs, lib, config, grab-bag, ... }: 
 with lib;
 let
     cfg = config.services.activate-linux;
@@ -12,7 +12,7 @@ in {
 
         package = mkOption {
             type = types.package;
-            default = pkgs.grab-bag.activate-linux;
+            default = grab-bag.activate-linux;
         };
     };
 

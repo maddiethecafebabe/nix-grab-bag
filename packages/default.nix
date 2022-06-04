@@ -1,5 +1,8 @@
-final: prev: {
-    MagicaVoxel = final.callPackage ./MagicaVoxel.nix {};
-    sai2 = final.callPackage ./sai2 {};
-    activate-linux = final.callPackage ./activate-linux {};
+{ pkgs, ... }:
+let
+    inherit (pkgs) callPackage;
+in {
+    MagicaVoxel = callPackage ./MagicaVoxel.nix {};
+    sai2 = callPackage ./sai2 {};
+    activate-linux = callPackage ./activate-linux {};
 }
