@@ -7,6 +7,7 @@ merged ever.
 | activate-linux  | [`services.activate-linux`](./modules/activate-linux.nix) | / |
 | sai2            | [`grab-bag.sai2`](./packages/sai2/default.nix) | wine+desktop wrapper, needs path to existing install |
 | MagicaVoxel     | [`grab-bag.MagicaVoxel`](./packages/MagicaVoxel.nix) | wine+desktop wrapper |
+| fusee-nano      | [`grab-bag.fusee-nano`](./packages/fusee-nano/default.nix) | |
 
 <details><summary>Installation for flakes as an overlay</summary>
 

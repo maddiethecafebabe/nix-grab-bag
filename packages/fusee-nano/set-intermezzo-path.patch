@@ -1,0 +1,11 @@
+diff --git a/Makefile b/Makefile
+index eae7a71..f005635 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,5 +1,5 @@
+ CC= gcc
+-INTERMEZZO= ./files/intermezzo.bin
++INTERMEZZO ?= ./files/intermezzo.bin
+ CFLAGS= -Wall -Wpedantic -Wextra -std=c99 -Os -DINTERMEZZO_PATH=\"$(INTERMEZZO)\"
+ OBJ= exploit.o usb.o
+ TARGET= fusee-nano
