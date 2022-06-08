@@ -1,4 +1,4 @@
-system: { pkgs, ... }:
+system: a @ { pkgs, ... }:
 let
     inherit (pkgs) callPackage;
     inherit (pkgs.lib) recursiveUpdate optionalAttrs;

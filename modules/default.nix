@@ -2,5 +2,6 @@
 {
     imports = [
         ./activate-linux.nix
+        ./udpih.nix
     ];
 }
