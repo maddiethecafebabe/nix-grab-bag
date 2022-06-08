@@ -13,12 +13,12 @@
 
     inherit (nixpkgs.lib) genAttrs;
     
-    supportedSystems = [ "x86_64-linux" ];
+    supportedSystems = [ "x86_64-linux" "aarch64-linux" ];
 
-    mkSystem = system: import ./packages {
+    mkSystem = system: import ./packages system {
       inherit inputs;
       pkgs = import nixpkgs {
-        inherit system;
+        inherit system lib;
         config.allowUnfree = true;
       };
     };

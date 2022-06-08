@@ -1,4 +1,5 @@
 { stdenv
+, lib
 , fetchurl
 , fetchFromGitHub
 , linuxPackages
@@ -8,10 +9,10 @@
 let
   arm_hdr = fetchurl {
     url = "https://github.com/GaryOderNichts/udpih/releases/download/v1/arm_kernel.bin.h";
-    sha256 = "sha256-ztAff0BPXO3YJhAp6+lCaaaaaaaaLkdqNmxaq/OClbw=";
+    sha256 = "sha256-MZRHHOsQdXRn/N8QAzyIy1qBsZ+H4csgfVBPTpoFyIU=";
   };
 in stdenv.mkDerivation rec {
-  version = "0.0.1";
+  version = "v1";
   name = "udpih-${version}-module-${kernel.modDirVersion}";
 
   src = fetchFromGitHub {
@@ -28,6 +29,7 @@ in stdenv.mkDerivation rec {
   patches = [ ./add-install-target.patch ];
 
   postPatch = ''
+    cp ${arm_hdr} arm_kernel/arm_kernel.bin.h
     pushd linux
   '';
   
@@ -40,4 +42,12 @@ in stdenv.mkDerivation rec {
     "KERNEL_DIR=${kernel.dev}/lib/modules/${kernel.modDirVersion}/build"
     "INSTALL_MOD_PATH=$(out)"
   ];
+
+  meta = with lib; {
+    description = "Exploit for the Wii U's USB Host Stack";
+    license = [ licenses.unfree ];
+    homepage = "https://github.com/GaryOderNichts/udpih";
+    maintainers = [  ];
+    platforms = platforms.linux;
+  };
 }
